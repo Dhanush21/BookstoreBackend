@@ -1,6 +1,7 @@
 const inventoryRoutes = require("./routes/inventoryRoutes");
 const express = require("express");
 const mongoose = require("mongoose");
+const invoiceRoutes = require("./routes/invoiceRoutes");
 require("dotenv").config();
 
 
@@ -8,6 +9,7 @@ const app = express();
 
 app.use(express.json());
 app.use("/api/inventory", inventoryRoutes);
+app.use("/api/invoices", invoiceRoutes);
 
 // MongoDB connection
 mongoose
